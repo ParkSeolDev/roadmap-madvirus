@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: madvirus-tdd
+
+  profiles:
+    active: local
+
+  config:
+    activate:
+      on-profile: local
+
+

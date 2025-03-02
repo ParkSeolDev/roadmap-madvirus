@@ -1,8 +1,8 @@
 plugins {
-    kotlin("jvm") version "1.9.25"
-    kotlin("plugin.spring") version "1.9.25" apply false
-    id("org.springframework.boot") version "3.4.3" apply false
-    id("io.spring.dependency-management") version "1.1.7" apply false
+    kotlin("jvm")
+    kotlin("plugin.spring") apply false
+    id("org.springframework.boot") apply false
+    id("io.spring.dependency-management") apply false
 }
 
 java {
@@ -11,10 +11,13 @@ java {
     }
 }
 
+val projectGroup: String by project
+val applicationVersion: String by project
+
 allprojects {
 
-    group = "com.ps"
-    version = "0.0.1-SNAPSHOT"
+    group = projectGroup
+    version = applicationVersion
 
     repositories {
         mavenCentral()
